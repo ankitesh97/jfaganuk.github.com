@@ -1,19 +1,9 @@
 ---
 layout: page
-title: About Pixyll
+title: About Jesse and His Code
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+I am a [PhD candidate in Management](http://gatton.uky.edu/Content.asp?PageName=PHDMgtCuGrdStDetails&memberid=1211) at the University of Kentucky and a member of the [LINKS Center for Social Network Analysis](https://sites.google.com/site/uklinkscenter/). I research social networks and organizations.
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
-
-Thanks to the following:
-
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Solarized](http://ethanschoonover.com/solarized)
+I love writing code. The world is digital, so I try to speak its language. This is a blog where I record and share my trials with coding. I do most of my analysis work in R, but I have a major project that I'm writing with JavaScript and NodeJS. I also dabble in some other languages like Julia, C++, and Python.
