@@ -1,13 +1,13 @@
 # Site settings
-title: Pixyll
-email: your_email@example.com
-author: John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title: Jesse Fagan and Some Code
+email: jesse.fagan@uky.edu
+author: Jesse Fagan
+description: "A place where I discuss coding and research in social science."
 baseurl: ""
-url: "http://pixyll.com"
+url: "http://jfaganuk.github.com"
 google_analytics:
-animated: false
-show_related_posts: false
+animated: true
+show_related_posts: true
 
 # Build settings
 markdown: kramdown
