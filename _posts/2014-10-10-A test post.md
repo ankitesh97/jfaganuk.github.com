@@ -31,5 +31,6 @@ I have not gotten the [Sublime Text 3 plugin](https://sublime.wbond.net/packages
 Then I push to github to publish it online.
 
 {% highlight bash %}
+git commit -m "it's a blog post"
 git push origin master
 {% endhighlight %}
