@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      A Test Post
+title:      Using Jekyll
 date:       2014-10-13 12:58:00
 summary:    Installing and testing Jekyll
 categories: jekyll pixyll

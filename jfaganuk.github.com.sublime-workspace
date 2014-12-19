@@ -8,10 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "jfaganuk.github.com.sublime-project",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 270,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -19,9 +19,33 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 117.0,
+		"height": 264.0,
 		"selected_items":
 		[
+			[
+				"jek",
+				"Jekyll: New draft"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -52,6 +76,16 @@
 	],
 	"file_history":
 	[
+		"/home/jfagan/.wine/drive_c/Program Files (x86)/World of Warcraft/WTF/Config.wtf",
+		"/home/jfagan/Dropbox/projects/tempur/email/basicnetwork/findit.R",
+		"/home/jfagan/webstorm/Install-Linux-tar.txt",
+		"/home/jfagan/Dropbox/projects/tempurReports2014/emailListFromKellyCarter_141107.csv",
+		"/home/jfagan/Dropbox/projects/tempurReports2014/gpd_danfoam_hash.txt",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_layouts/default.html",
+		"/home/jfagan/.local/share/applications/mimeapps.list",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/jfaganuk.github.com.sublime-project",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_includes/comments.html",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_includes/head.html",
 		"/home/jfagan/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/about.md",
 		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_posts/2014-10-10-A test post.md",
@@ -66,7 +100,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -102,24 +136,24 @@
 			[
 				{
 					"buffer": 0,
-					"file": "jfaganuk.github.com.sublime-project",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 270,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16,
-								16
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -133,11 +167,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -166,10 +200,18 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 326.0
+	},
+	"output.sftp":
+	{
+		"height": 286.0
+	},
 	"project": "jfaganuk.github.com.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":

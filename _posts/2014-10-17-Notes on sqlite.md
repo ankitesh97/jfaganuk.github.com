@@ -6,7 +6,7 @@ summary:    Some notes and usage of SQLite and RSQLite
 categories: jekyll pixyll
 ---
 
-I think SQLite a perfect database engine for projects that have limited user scope. For instance, if you have an app on a phone, or you're managing data for some statistical analysis, or you're prototyping an app. It is not a good choice if you need lots of concurrency, two or more people need to write data to the database at once. SQLite is very fast if you use it properly
+I think SQLite a perfect database engine for projects that have a limited user scope. For instance, if you have an app on a phone, or you're managing data for some statistical analysis, or you're prototyping an app. It is not a good choice if you need lots of concurrency, two or more people need to write data to the database at once. SQLite is very fast if you use it properly
 
 In Ubuntu you use SQLite3 to use the SQLite command line interface.
 

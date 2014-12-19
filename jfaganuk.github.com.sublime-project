@@ -5,14 +5,5 @@
 			"follow_symlinks": true,
 			"path": "."
 		}
-	],
-
-	"settings":
-	{
-		"Jekyll":
-		{
-			"post_path" : "/home/jfagan/Dropbox/projects/jfaganuk.github.com/_posts",
-			"drafts_path" : "/home/jfagan/Dropbox/projects/jfaganuk.github.com/_drafts"
-		}
-	}
+	]
 }
