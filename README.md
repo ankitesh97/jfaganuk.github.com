@@ -1,3 +1,3 @@
-### Jesse Fagan's Code Hub
+### Triads Go Boink!
 
-Just a place for me to share the trials of coding and social science.
+Coding, social science, and networks.
