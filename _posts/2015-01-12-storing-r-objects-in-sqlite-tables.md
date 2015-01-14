@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Storing R Objects in SQLite Tables
+title: Storing R Objects in SQL Tables
 categories: []
 tags: [R, SQLite]
 published: True
 date: 2015-01-12 12:55:04
-summary: If you run lots of analyses and want those raw results stored in a database. This is how I figure it out.
+summary: Keep your analyses and prepared rdata objects indexed in a database.
 
 ---
 
