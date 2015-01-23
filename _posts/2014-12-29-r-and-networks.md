@@ -66,7 +66,7 @@ help.search("sum")
 
 I use the tab completion a lot in RStudio because you tend to forget what the different options are. To use tab completion in RStudio, put your cursor inside some function text and hit *TAB*. Then you can use the arrow keys to select the options you want.
 
-![Sum tab completion]({{ site.url }}/assets/sum_tab_completion.gif)
+![Sum tab completion]({{ site.url }}/assets/rstudio-tabs.gif)
 
 This method also works if you have data frame or list object to select a column, or use it to help you auto-complete the names of variables or function names. Especially nice if the names are long.
 
@@ -85,31 +85,41 @@ I mean two things when I say "going to the source" - I mean you can usually cont
 There are dozens of packages for network analysis, and the number grows every year. But I personally only use a few of them frequently. The packages you most frequently would see me use are ```igraph``` for all sorts of analysis and graph handeling, ```regexf``` for exporting graph files to Gephi, and sometimes ```sna``` for functions that ```igraph``` is missing (like QAP correlation).
 
 
-#### ```igraph``` and ```sna```
+#### General Networks: ```igraph``` and ```sna```
 
 Generally if you use R to do social network analysis you are going to use one of these two packages. There are benefits to using either of them. But I tend to use ```igraph``` for two big reasons.
   
   1. *```igraph``` is much faster*. See a [short benchmark I did to demonstrate]({{ site.url }}/assets/sna_igraph_benchmark.html) that **betweenness** and **shortest paths** are calculated about 5-7x faster. The ```igraph``` package is coded in the back end entirely in C, which makes it blazingly fast. It is always preferable to use ```igraph``` functions instead of writing your own as much as possible since you will experience a large speed difference.
-  2. *The ```igraph``` objects are compact and consistent.* The graph objects for ```igraph``` can hold vertex attributes, visual display attributes, edge attributes, and when you filter or change the graph the attributes are preserved. Every function expects an igraph object and it doesn't matter how you initially formatted the data. The ```sna``` package tends to use raw matrices, and I usually have a harder time keeping the different elements of my analysis together when using ```sna```. 
+  2. *The ```igraph``` objects are compact and consistent.* The graph objects for ```igraph``` can hold vertex attributes, visual display attributes, edge attributes, and when you filter or change the graph the attributes are preserved. Every function expects an igraph object and it doesn't matter how you initially formatted the data. The ```sna``` package tends to use raw matrices, or is generally more complicated (you can use the ```network``` package to add on proper handling of network objects for instance). I usually have a harder time keeping the different elements of my analysis together when using ```sna```.
 
-That being said, the ```sna``` package is written more for *social* network analysis and we written by social scientists while the ```igraph``` package was written by computer scientists (probably why the code is so much better) and is oriented to problems that computer scientists tend to face. The ```igraph``` package has lots of functions for community structure and random graph generating models.  There are functions in the ```sna``` package that the social scientist would expect. For instance the ```sna``` package has a *QAP correlation* function, and it plays better with ```ergm```. However, it's very easy (one line of code normally) to convert an ```igraph``` object into something we can use for QAP, ERGM, or Siena.
+That being said, the ```sna``` package is written more for *social* network analysis and we written by social scientists while the ```igraph``` package was written by computer scientists (probably why the code is so much better) and is oriented to problems that computer scientists tend to face. The ```igraph``` package has lots of functions for community structure and random graph generating models.  There are functions in the ```sna``` package that the social scientist would expect. For instance the ```sna``` package has a *QAP correlation* function, and it plays better with ```ergm```. The ```sna``` package supports an ecology of different packages, including network, ergm, statnet, tergm, networkDynamic, ndtv, etc. However, it's very easy (one line of code normally) to convert an ```igraph``` object into something we can use for QAP, ERGM, or Siena.
+
 
 > <i class="fa fa-exclamation-triangle fa-2x red"></i> If you load both ```igraph``` and ```sna``` you will have conflicted function names. For instance, both packages have a ```betweenness``` function for that centrality measure. To make sure you are using the correct function you need to use the namespace, or double colon operator (i.e. ```igraph::betweenness()``` vs. ```sna::betweenness()```)
 
-#### statnet
+#### Statistical Modeling: ```statnet```, ```ergm```, ```siena```, & ```relevent```
 
-#### siena
+As a networks researcher you may want to test certain hypotheses such as, are men more likely to connect with other men than women?, do the characteristics of a node determine it's position?, or does the structure of one network predict the structure of a different network? These questions are difficult or impossible to answer with standard statistical techniques largely do the violation of independence assumptions. To account for this researchers use a class of models known as [*p\** models or *exponential random graph models* (ERGM)](http://ptrckprry.com/course/ssd/Robi07a.pdf).
 
-#### d3network
+There are longitudinal approaches to network modeling as well. What factors impact the development of network structure? You can explore these kinds of questions with [Siena models](http://www.stats.ox.ac.uk/~snijders/siena/siena_r.htm) using ```rsiena``` models, or [Relational Event Models](http://orm.sagepub.com/content/17/1/23.abstract) ```relevent```.
 
-#### tnet
+#### Visualization: ```igraphtosonia```, ```ndtv```, ```rgexf```, & ```d3network```
 
-#### rgexf
+These are packages for exporting to other visualization software, making interactive visualizations, or making animations of dynamic networks. [SoNIA](http://web.stanford.edu/group/sonia/) is software for animating dynamic networks, and ```igraphtosonia``` will take a dynamic igraph graph object and export it to a format that SoNIA can use. The ```ndtv``` package is an excellent package for the analysis and visualization of dynamic networks and interacts with ERGM models in R.
 
-#### igraphtosonia
+You can create some very nice images in R, but [Gephi](http://gephi.github.io/) is a fantastic platform for network visualization and exploration and ```rgexf``` will export file that Gephi can use. The GEXF format is can also be used by [SigmaJS](http://sigmajs.org/), which is an embedded web-visualization library. Another option for web-visualization or dynamically interacting with your network data, use the ```d3network``` package which uses the [D3js](http://d3js.org/) library to create interactivity.
 
-#### 
+#### Other: ```tnet```, ```pii```
 
+Other packages that you might use for specialized purposes. For instance ```tnet``` has an implementation of a two-mode clustering coeficient, and a package I'm authoring, ```pii```, has an implementation of the *political independence index*.
+
+#### Tips for Searching for Packages
+
+If you want to see if a function has been implemented already for a problem you have, start with Google and append *r*, *cran*, or *rstats* to the front of your query. Search for "cran two mode clustering" or check out [RSeek.org](http://www.rseek.org/) which is a specialized search engine for R questions.
+
+#### Next: [Analyzing a Basic Network]({% post_url 2015-01-02-analyzing-a-basic-network %})
+
+Next we'll import some network data, clean and prepare it, do some basic analyses, do some basic visualization, and export the data and results.
 
 
 

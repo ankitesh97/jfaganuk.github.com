@@ -9,12 +9,12 @@ summary: Table of contents for my Introduction to Network Analysis in R series.
 
 ---
 
-This will be a series of posts that I hope will provide a broad introduction to the capabilities of R to analyze networks. I will use this set of posts as the basis for the different lessons I have for R, both at the workshop and elsewhere. I like to use the ```igraph``` package primarily for my analysis, but I plan on covering bits and pieces of the dozens of other packages out there. This work is not intended to be an introduction to network theory.
+I am writing a series of posts that will provide a broad introduction to the network analysi capabilities of R. I will use this set of posts as the basis for the different lessons I have for R, both at the LINKS Workshop here at the [LINKS Center for Social Network Analysis](https://sites.google.com/site/uklinkscenter/home) and elsewhere. I like to use the ```igraph``` package primarily for my analysis, but I plan on covering bits and pieces of the dozens of other packages out there. Although this work is not intended to be an introduction to network theory and it is assumed you have some familiarity with network theory.
 
 
 # Contents
 
-### R and Networks
+### [R and Networks]({% post_url 2014-12-29-r-and-networks %})
 The resources and tools available to you once you start is vast. Let's get a lay of the land.
 
   * A very brief introduction to R.
@@ -22,7 +22,7 @@ The resources and tools available to you once you start is vast. Let's get a lay
   * The network analysis workflow, from data to results. 
   * How R can integrate with other software.
 
-### Analyzing a Basic Network
+### [Analyzing a Basic Network]({% post_url 2015-01-02-analyzing-a-basic-network %})
 Getting started with network analysis in R.
 
   * Importing data and creating a graph object.
