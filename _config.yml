@@ -1,6 +1,6 @@
 # Site settings
 title: Triads Go Boink!
-email: jesse.fagan@uky.edu
+email: aftersox@gmail.com
 author: Jesse Fagan
 description: "A place where I discuss coding and research in social science."
 baseurl: ""
@@ -8,6 +8,7 @@ url: "http://jfaganuk.github.com"
 google_analytics:
 animated: true
 show_related_posts: true
+twitter_username: jessemfagan
 
 # Build settings
 markdown: kramdown

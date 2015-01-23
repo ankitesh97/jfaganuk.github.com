@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Jesse and His Code
+title: About Jesse
 permalink: /about/
 ---
 
