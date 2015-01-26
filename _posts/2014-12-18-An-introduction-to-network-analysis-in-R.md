@@ -22,12 +22,12 @@ The resources and tools available to you once you start is vast. Let's get a lay
   * The network analysis workflow, from data to results. 
   * How R can integrate with other software.
 
-### [Analyzing a Basic Network]({% post_url 2015-01-02-analyzing-a-basic-network %})
-Getting started with network analysis in R.
+### [Getting Network Data into R]({% post_url 2015-01-02-analyzing-a-basic-network %})
+Importing network data.
 
-  * Importing data and creating a graph object.
-  * Analyzing the network
-  * Visualizing the results of analysis
+  * Importing data from various sources.
+  * Cleaning and preparing the network data
+  * Creating the graph object
 
 ### Manipulating the Network
 What if you need to change the network data before or after analyzing it?
