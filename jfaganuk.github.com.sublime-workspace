@@ -8,10 +8,45 @@
 	"buffers":
 	[
 		{
-			"contents": "",
+			"file": "_posts/2014-12-18-An-introduction-to-network-analysis-in-R.md",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 3273,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2014-12-29-r-and-networks.md",
+			"settings":
+			{
+				"buffer_size": 10934,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_posts/2015-01-02-analyzing-a-basic-network.md",
+			"settings":
+			{
+				"buffer_size": 21952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Email0-DI-141231.db\n\nEmail0 	indicates a file that is supposed to have all available email data in it.\nDI 		indicates that it is de-identified. It should not be possible to identify the source\n\nThis is a SQLite3 Database. It can be read by installing SQLite3 and using a command prompt:\n\nsqlite3 Email0-DI-141231.db\n\nTables\n===========================\n\nattachments, groups, and email \n------------------------------\nThis tables are empty. I have not populated them. For this database only the network data is important. I will consider the attachment and group data at some other point.\n\nemailAlias\n----------\nJust two columns. It will recode secondary email addresses to the primary email address.\n\nmasterEmail\n-----------\nA table that was put together by UK team. It lists all the known possible email addresses that would be part of the company. The func variable indicates the function (or if the entity is not part of the company, or is not a person). the person variable indicates if the address is beleived to be an actual person (as opposed to a bot or system). Meetingroom is 1 if the address is a meeting room.\n\n\nlink, linkR1, linkR2, linkR3, linkR4\n------------------------------------\nThe link table has seven columns. Most pertinant are pstid, date, field, and email. Pstid is the unique id of a single email message. Email is an address that is connected to that single message. The field column describes how that address is connected to the message (is it the sender, receiver, cc, etc). Date is the datetime that the message was created or sent. The linkid is a simple incremental integer id, and the pstfile and filename describe the file the data came from.s\n\nThe files with R# are progressive tranformations of the link table so we can do network analysis with them. LinkR1 recodes the email address using the emailAlias table. LinkR2 cleans up the columns and deduplicate linkR1. \n\nLinkR3 is one of the goals of this processing. It turns the link data into an edgelist. The source column contains the addresses the sender/from column, and the target contains the addresses of the to/cc/bcc/recipient columns. LinkR4 filters the linkR3 table for only senders who are in the organization (so no one outside the organization sending the mail), and only messages with less than 4 addresses (eliminates any mass mailings, and focuses on the 'high-signal' messages). Also only \"people\" are retained (we exclude meetingrooms and bots, etc). LinkR4 is a good table to create networks from.\n\nThe threeSliceNetwork is taken from linkR4. But it counts the number of messages between the source and target in three different time ranges (April 2013, August 2013, and June 2014). The count of edges between two people is in weight.",
+			"file": "/home/jfagan/Dropbox/Tempur Sensitive Data/Email Data/Email0-DI-1412321.readme",
+			"file_size": 2665,
+			"file_write_time": 130666865274154976,
+			"settings":
+			{
+				"buffer_size": 2739,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jfagan/tempur/june2013functionNetwork.csv",
+			"settings":
+			{
+				"buffer_size": 20070,
 				"line_ending": "Unix"
 			}
 		}
@@ -19,12 +54,36 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 264.0,
+		"height": 117.0,
 		"selected_items":
 		[
 			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp high",
+				"Snippet: highlight"
+			],
+			[
+				"datetim",
+				"Jekyll: Insert current datetime"
+			],
+			[
 				"jek",
+				"Jekyll: New post"
+			],
+			[
+				"new dra",
 				"Jekyll: New draft"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"side",
+				"Side Bar: Refresh"
 			],
 			[
 				"qui",
@@ -41,17 +100,9 @@
 			[
 				"git comm",
 				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add Current File"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -72,11 +123,25 @@
 	},
 	"expanded_folders":
 	[
-		"/home/jfagan/Dropbox/projects/jfaganuk.github.com"
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_posts",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_sass",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/assets"
 	],
 	"file_history":
 	[
+		"/home/jfagan/.wine/drive_c/Program Files (x86)/World of Warcraft/WTF/Account/AFTERSOX/SavedVariables/TradeSkillMaster_Crafting.lua",
 		"/home/jfagan/.wine/drive_c/Program Files (x86)/World of Warcraft/WTF/Config.wtf",
+		"/home/jfagan/Dropbox/projects/tempur/email/createEdgeList01.sql",
+		"/home/jfagan/.cache/.fr-CJZegi/karate.gml",
+		"/home/jfagan/.cache/.fr-5EreSp/karate.txt",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_posts/2014-06-10-see-pixyll-in-action.md",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/.gitignore",
+		"/home/jfagan/.config/sublime-text-3/Packages/User/Jekyll.sublime-settings",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/assets/rstudio-tabs.gif",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_posts/2014-12-29-r-and-networks.md",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/assets/sna_igraph_benchmark.html",
+		"/home/jfagan/Dropbox/projects/jfaganuk.github.com/_sass/_basscss.scss",
 		"/home/jfagan/Dropbox/projects/tempur/email/basicnetwork/findit.R",
 		"/home/jfagan/webstorm/Install-Linux-tar.txt",
 		"/home/jfagan/Dropbox/projects/tempurReports2014/emailListFromKellyCarter_141107.csv",
@@ -131,15 +196,16 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "_posts/2014-12-18-An-introduction-to-network-analysis-in-R.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 3273,
 						"regions":
 						{
 						},
@@ -153,13 +219,139 @@
 						"settings":
 						{
 							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jekyll/Syntaxes/Markdown (Jekyll).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 38.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_posts/2014-12-29-r-and-networks.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10934,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jekyll/Syntaxes/Markdown (Jekyll).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_posts/2015-01-02-analyzing-a-basic-network.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17488,
+								17488
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Jekyll/Syntaxes/Markdown (Jekyll).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 7685.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/jfagan/Dropbox/Tempur Sensitive Data/Email Data/Email0-DI-1412321.readme",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2453,
+								2453
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 110.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/jfagan/tempur/june2013functionNetwork.csv",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								380
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 421.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -243,10 +435,10 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 394.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -11,7 +11,6 @@ summary: Table of contents for my Introduction to Network Analysis in R series.
 
 I am writing a series of posts that will provide a broad introduction to the network analysi capabilities of R. I will use this set of posts as the basis for the different lessons I have for R, both at the LINKS Workshop here at the [LINKS Center for Social Network Analysis](https://sites.google.com/site/uklinkscenter/home) and elsewhere. I like to use the ```igraph``` package primarily for my analysis, but I plan on covering bits and pieces of the dozens of other packages out there. Although this work is not intended to be an introduction to network theory and it is assumed you have some familiarity with network theory.
 
-
 # Contents
 
 ### [R and Networks]({% post_url 2014-12-29-r-and-networks %})
@@ -28,6 +27,14 @@ Importing network data.
   * Importing data from various sources.
   * Cleaning and preparing the network data
   * Creating the graph object
+
+### [A Simple Network Analysis]({% post_url 2015-01-24-basic-network-analysis %})
+After the data is ready, let's analyze it.
+
+  * Centrality measures
+  * Clusters and cohesion
+  * Extracting results for use in modeling
+  * Visualizng analysis
 
 ### Manipulating the Network
 What if you need to change the network data before or after analyzing it?

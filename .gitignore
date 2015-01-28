@@ -1,7 +1,7 @@
 _site
 .sass-cache
 .DS_Store
-*.sublime-workspace
+.sublime-workspace
 
 # Ignore the config file that's used for gh-pages.
 _config.gh-pages.yml

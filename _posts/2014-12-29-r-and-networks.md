@@ -109,15 +109,15 @@ These are packages for exporting to other visualization software, making interac
 
 You can create some very nice images in R, but [Gephi](http://gephi.github.io/) is a fantastic platform for network visualization and exploration and ```rgexf``` will export file that Gephi can use. The GEXF format is can also be used by [SigmaJS](http://sigmajs.org/), which is an embedded web-visualization library. Another option for web-visualization or dynamically interacting with your network data, use the ```d3network``` package which uses the [D3js](http://d3js.org/) library to create interactivity.
 
-#### Other: ```tnet```, ```pii```
+#### Other: ```tnet```, ```pii```, ```egonet```
 
-Other packages that you might use for specialized purposes. For instance ```tnet``` has an implementation of a two-mode clustering coeficient, and a package I'm authoring, ```pii```, has an implementation of the *political independence index*.
+Other packages that you might use for specialized purposes. For instance ```tnet``` has an implementation of a two-mode clustering coeficient. The ```egonet``` package has special functions for ego-network analysis. A package I'm authoring, ```pii```, has an implementation of the *political independence index*.
 
 #### Tips for Searching for Packages
 
 If you want to see if a function has been implemented already for a problem you have, start with Google and append *r*, *cran*, or *rstats* to the front of your query. Search for "cran two mode clustering" or check out [RSeek.org](http://www.rseek.org/) which is a specialized search engine for R questions.
 
-#### Next: [Analyzing a Basic Network]({% post_url 2015-01-02-analyzing-a-basic-network %})
+#### Next: [Getting Data in and Out of R]({% post_url 2015-01-02-analyzing-a-basic-network %})
 
 Next we'll import some network data, clean and prepare it, do some basic analyses, do some basic visualization, and export the data and results.
 
