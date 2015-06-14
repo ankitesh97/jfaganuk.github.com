@@ -149,15 +149,15 @@ The centrality measures use network *paths* to calculate power and influence. Th
 
 A person may have 10 ties to people, but if 5 of those ties go out to a group that all have ties with each other, and the other 5 ties go to a group that are also connected, then the focal person (or *ego*) has a network with lots of redundancy. *Effective size* is the size of an ego's network minus that redundancy. You can read more [about it here](http://www.analytictech.com/connections/v20%281%29/holes.htm).
 
-This is an example of where neither **igraph** or **sna** have the function for measuring effective size. It's also a great of example how to use Stack Overflow for help. If you Google "stack overflow igraph effective size" your first link is the answer to your question. Someone has provided a function that will calculate effective size for a given node. The elipses ```...``` allow us to pass a number of arbitrary arguments to ```neighbors``` if we want. Which is important since this is a directed network.
+This is an example of where neither **igraph** or **sna** have the function for measuring effective size. It's also a great of example how to use Stack Overflow for help. If you Google "stack overflow igraph effective size" your first link is the answer to your question. Someone has provided a function that will calculate effective size for a given node. The elipses ```...``` allow us to pass a number of arbitrary arguments to ```neighbors``` if we want. Which is important since this is a directed network. *Thanks to Ofrit Lesser for some bug fixes on this code.*
 
 {% highlight R %}
 # definite a function like this
 ego.effective.size <- function(g, ego, ...) {
-  n = neighbors(g, ego, ...)
-  t = length(E(g)[to(n) & !to(ego)])
-  n = length(n)
-  n - (2 * t) / n
+  egonet <- induced.subgraph(g, neighbors(g, ego, ...))
+  n <- vcount(egonet)
+  t <- ecount(egonet)
+  return(n - (2 * t) / n)
 }
 # then call it like this
 ego.effective.size(g1.edge3, "BRAZEY")
@@ -172,9 +172,9 @@ effective.size <- function(g, ego=NULL, ...) {
   if(!is.null(ego)) {
     return(ego.effective.size(g, ego, ...))
   }
-  return(sapply(V(gs[[1]])$name, function(x) { ego.effective.size(gs[[1]], x, ...)}))
+  return (sapply(V(g), function(x) {ego.effective.size(g,x, ...)}))
 }
-effective.size(g1.edge3, mode = 'all')
+effective.size(g, mode='all')
 {% endhighlight %}
 
 #### Constraint
